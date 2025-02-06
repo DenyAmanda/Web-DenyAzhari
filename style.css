@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-
 body {
   height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -12,6 +11,21 @@ body {
   display: flex;
 
   flex-direction: column;
+}
+/* Latar belakang video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Agar konten muncul di atas video */
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 header.navbar-container {
@@ -40,14 +54,14 @@ header.navbar-container {
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 500;
-  color: black;
+  color: #fffffe;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   transition: all 0.5s ease-in-out;
 }
 
 .navbar-container .nav-list li:hover a {
-  background-color: rgb(4, 4, 4);
+  background-color: #72757e;
   color: aliceblue;
 }
 
@@ -69,10 +83,11 @@ main .content {
 
 main .content .content-description {
   flex: 1 1;
+  color: #fffffe;
 }
 
 main .conten .content-description title {
-  font-size: 10px;
+  font-size: 18px;
   margin-block: 1rem;
 }
 
@@ -80,6 +95,7 @@ main .content .content-description p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1, 7rem;
   font-size: 1.2rem;
+  color: #fffffe;
 }
 
 main .content .content-description button {
@@ -100,6 +116,7 @@ main .content .content-description button {
 .logo {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
+  color: #fffffe;
 }
 
 main .content .content-description button:hover {
@@ -117,6 +134,10 @@ main .content .content-image img {
   margin: auto;
   min-width: 300px;
   width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 15px rgba(241, 243, 244, 0.1);
 }
 
 .icon {
@@ -127,14 +148,14 @@ main .content .content-image img {
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 400;
-  color: black;
+  color: #fffffe;
   padding: 0.5rem 1rem;
   border-radius: 899px;
   transition: all 0.5s ease-in-out;
 }
 
 .icon a:hover {
-  border: 3px solid #2d3e50;
-  color: #2d3e50;
+  border: 3px solid #20d3e5;
+  color: #20d3e5;
   background-color: transparent;
 }
